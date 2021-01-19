@@ -4,10 +4,14 @@ function FizzBuzz(){
 }
 
 function convert(number){
-  let retString = "";
-
   if(number < 0) { throw new Error("Negative numbers are not allowed"); };
 
+  return buildFizzBuzz(number);
+}
+
+function buildFizzBuzz(number){
+  let retString = "";
+  
   if(isMultipleOfThree(number)){
     retString += "fizz";
   }
